@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-01-19T16:22:10.466119" rpa="false" schemaversion="5">
+<suite id="s1" name="MagentoModCart" source="C:\Users\formation\Desktop\formation\selenium-robot\tests-robot-framework\magento\MagentoModCart.robot">
+<test id="s1-t1" name="Luma Test" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-01-19T16:22:10.610812" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-19T16:22:10.610812" elapsed="2.666659"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-19T16:22:13.277471" elapsed="0.136446"/>
+</kw>
+<kw name="Login">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:13.414433" level="INFO">Opening url 'https://magento.softwaretestingboard.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-19T16:22:13.414433" elapsed="5.140386"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:18.554819" level="INFO">Clicking element 'link=Sign In'.</msg>
+<arg>link=Sign In</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T16:22:18.554819" elapsed="1.586829"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:20.141648" level="INFO">Typing text 'bara_olivier@hotmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T16:22:20.141648" elapsed="0.317464"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:20.459112" level="INFO">Typing text '1867Paloma117&amp;' into text field 'id=pass'.</msg>
+<arg>id=pass</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T16:22:20.459112" elapsed="0.065848"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:20.526299" level="INFO">Clicking element 'xpath=//form[@id='login-form'][1]/fieldset/div[4]/div[1]/button/span'.</msg>
+<arg>xpath=//form[@id='login-form'][1]/fieldset/div[4]/div[1]/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T16:22:20.524960" elapsed="3.108833"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Test du formule de connexion</doc>
+<status status="PASS" start="2024-01-19T16:22:13.414433" elapsed="10.219360"/>
+</kw>
+<kw name="Navigate to Cart">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:23.633793" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/cart/'</msg>
+<arg>https://magento.softwaretestingboard.com/checkout/cart/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-19T16:22:23.633793" elapsed="6.184186"/>
+</kw>
+<status status="PASS" start="2024-01-19T16:22:23.633793" elapsed="6.184186"/>
+</kw>
+<kw name="Modify Item From Cart">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:29.851606" level="INFO">${nb_articles} = 4</msg>
+<var>${nb_articles}</var>
+<arg>//body[1]/div[2]/main[1]/div[3]/div[1]/div[3]/form[1]/div[1]/table[1]/tbody[2]/tr[1]/td[3]/div[1]/div[1]/label[1]/input[1]</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T16:22:29.819055" elapsed="0.032551"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Nombre total d'elements: ${nb_articles}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-19T16:22:29.851606" elapsed="0.001086"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:29.852692" level="INFO">Typing text '10' into text field '//body[1]/div[2]/main[1]/div[3]/div[1]/div[3]/form[1]/div[1]/table[1]/tbody[2]/tr[1]/td[3]/div[1]/div[1]/label[1]/input[1]'.</msg>
+<arg>//body[1]/div[2]/main[1]/div[3]/div[1]/div[3]/form[1]/div[1]/table[1]/tbody[2]/tr[1]/td[3]/div[1]/div[1]/label[1]/input[1]</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T16:22:29.852692" elapsed="0.114252"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:29.991199" level="INFO">${nb_articles} = 10</msg>
+<var>${nb_articles}</var>
+<arg>//body[1]/div[2]/main[1]/div[3]/div[1]/div[3]/form[1]/div[1]/table[1]/tbody[2]/tr[1]/td[3]/div[1]/div[1]/label[1]/input[1]</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T16:22:29.966944" elapsed="0.024255"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Nombre total d'elements: ${nb_articles}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-19T16:22:29.991199" elapsed="0.000000"/>
+</kw>
+<doc>Test de suppression du panier</doc>
+<status status="PASS" start="2024-01-19T16:22:29.817979" elapsed="0.174230"/>
+</kw>
+<kw name="Logout">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[@class='panel header'][1]/ul[@class='header links']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-19T16:22:29.992209" elapsed="0.009889"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:30.002098" level="INFO">Clicking button 'xpath=//div[@class='panel header'][1]/ul[@class='header links'][1]/li[@class='customer-welcome']/span/button'.</msg>
+<arg>xpath=//div[@class='panel header'][1]/ul[@class='header links'][1]/li[@class='customer-welcome']/span/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T16:22:30.002098" elapsed="0.068938"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T16:22:30.072037" level="INFO">Clicking element 'xpath=//div[@class='customer-menu']/ul/li[@class='authorization-link']/a'.</msg>
+<arg>xpath=//div[@class='customer-menu']/ul/li[@class='authorization-link']/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T16:22:30.072037" elapsed="3.315264"/>
+</kw>
+<doc>Test du deconnexion</doc>
+<status status="PASS" start="2024-01-19T16:22:29.992209" elapsed="3.396480"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-19T16:22:33.388689" elapsed="2.449224"/>
+</kw>
+<status status="PASS" start="2024-01-19T16:22:10.605073" elapsed="25.232840"/>
+</test>
+<status status="PASS" start="2024-01-19T16:22:10.466119" elapsed="25.371794"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="MagentoModCart">MagentoModCart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

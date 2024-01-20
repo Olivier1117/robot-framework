@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-01-19T11:58:43.321533" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests-Robot-Framework" source="C:\Users\formation\Desktop\formation\selenium-robot\tests-robot-framework">
+<suite id="s1-s1" name="Magento" source="C:\Users\formation\Desktop\formation\selenium-robot\tests-robot-framework\magento">
+<suite id="s1-s1-s1" name="MagentoAssertCart" source="C:\Users\formation\Desktop\formation\selenium-robot\tests-robot-framework\magento\MagentoAssertCart.robot">
+<test id="s1-s1-s1-t1" name="Luma Test" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-01-19T11:58:43.521355" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-19T11:58:43.521355" elapsed="3.349320"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-19T11:58:46.871330" elapsed="0.118650"/>
+</kw>
+<kw name="Login">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-19T11:58:46.989980" level="INFO">Opening url 'https://magento.softwaretestingboard.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-19T11:58:46.989980" elapsed="2.869139"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T11:58:49.861202" level="INFO">Clicking element 'link=Sign In'.</msg>
+<arg>link=Sign In</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T11:58:49.860205" elapsed="1.392266"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-19T11:58:51.253472" level="INFO">Typing text 'bara_olivier@hotmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T11:58:51.252471" elapsed="0.470050"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-19T11:58:51.723580" level="INFO">Typing text '1867Paloma117&amp;' into text field 'id=pass'.</msg>
+<arg>id=pass</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T11:58:51.723580" elapsed="0.137208"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T11:58:51.861823" level="INFO">Clicking element 'xpath=//form[@id='login-form'][1]/fieldset/div[4]/div[1]/button/span'.</msg>
+<arg>xpath=//form[@id='login-form'][1]/fieldset/div[4]/div[1]/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T11:58:51.861823" elapsed="1.949044"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Test du formule de connexion</doc>
+<status status="PASS" start="2024-01-19T11:58:46.989980" elapsed="6.820887"/>
+</kw>
+<kw name="Navigate to Subsubmenu">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-19T11:58:53.812382" level="INFO">Opening browser 'firefox' to base url 'https://magento.softwaretestingboard.com/checkout/cart/'.</msg>
+<msg time="2024-01-19T11:59:09.710991" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-01-19T11:59:09.710991" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for firefox using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>https://magento.softwaretestingboard.com/checkout/cart/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-01-19T11:58:53.812382" elapsed="16.026189">NoSuchDriverException: Message: Unable to obtain driver for firefox using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<status status="FAIL" start="2024-01-19T11:58:53.811375" elapsed="16.027196">NoSuchDriverException: Message: Unable to obtain driver for firefox using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Add Items To Cart">
+<doc>Test d'ajout de suppression du panier</doc>
+<status status="NOT RUN" start="2024-01-19T11:59:09.838571" elapsed="0.000000"/>
+</kw>
+<kw name="Logout">
+<doc>Test du deconnexion</doc>
+<status status="NOT RUN" start="2024-01-19T11:59:09.838571" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-19T11:59:09.838571" elapsed="2.756985"/>
+</kw>
+<status status="FAIL" start="2024-01-19T11:58:43.521355" elapsed="29.074201">NoSuchDriverException: Message: Unable to obtain driver for firefox using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<status status="FAIL" start="2024-01-19T11:58:43.364911" elapsed="29.230645"/>
+</suite>
+<status status="FAIL" start="2024-01-19T11:58:43.353180" elapsed="29.242376"/>
+</suite>
+<status status="FAIL" start="2024-01-19T11:58:43.336895" elapsed="29.258661"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests-Robot-Framework">Tests-Robot-Framework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Magento">Tests-Robot-Framework.Magento</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="MagentoAssertCart">Tests-Robot-Framework.Magento.MagentoAssertCart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
